@@ -110,20 +110,20 @@ FLAGS:
   {{range .VisibleFlags}}{{.}}
   {{end}}
 EXAMPLES:
-  1. Configure a new remote tier which transitions objects to a bucket in AWS S3 with STANDARD storage class:
+  1. Configure a MinIO object storage deployment as a new remote tier.
      {{.Prompt}} {{.HelpName}} minio myminio WARM-MINIO-TIER --endpoint https://warm-minio.com \
         --access-key ACCESSKEY --secret-key SECRETKEY --bucket mybucket --prefix myprefix/
 
-  2. Configure a new remote tier which transitions objects to a bucket in Azure Blob Storage:
+  2. Configure Azure Blob Storage as a new remote tier.
      {{.Prompt}} {{.HelpName}} azure myminio AZTIER --account-name ACCOUNT-NAME --account-key ACCOUNT-KEY \
         --bucket myazurebucket --prefix myazureprefix/
 
-  3. Configure a new remote tier which transitions objects to a bucket in AWS S3 with STANDARD storage class:
+  3. Configure AWS S3 as a new remote tier.
      {{.Prompt}} {{.HelpName}} s3 myminio S3TIER --endpoint https://s3.amazonaws.com \
         --access-key ACCESSKEY --secret-key SECRETKEY --bucket mys3bucket --prefix mys3prefix/ \
         --storage-class "STANDARD" --region us-west-2
 
-  4. Configure a new remote tier which transitions objects to a bucket in Google Cloud Storage:
+  4. Configure Google Cloud Storage as a new remote tier.
      {{.Prompt}} {{.HelpName}} gcs myminio GCSTIER --credentials-file /path/to/credentials.json \
         --bucket mygcsbucket  --prefix mygcsprefix/
 `,
